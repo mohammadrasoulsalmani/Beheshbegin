@@ -511,4 +511,60 @@ export const TRANSLATIONS: { [key: string]: LocalizedString } = {
     en: 'Aram Card',
     ar: 'بطاقة بهش بگین',
   },
+
+  phoneRequired: {
+  fa: 'شماره همراه نمی‌تواند خالی باشد.',
+  en: 'Phone number cannot be empty.',
+  ar: 'لا يمكن أن يكون رقم الهاتف فارغاً.'
+},
+  phoneInvalid: {
+    fa: 'فرمت شماره همراه اشتباه است (مثال: 09123456789)',
+    en: 'Invalid phone number format (e.g., 09123456789)',
+    ar: 'تنسيق رقم الهاتف غير صحيح (مثال: 09123456789)'
+  },
+  networkError: {
+    fa: 'خطا در ارتباط با سرور',
+    en: 'Network error',
+    ar: 'خطأ في الشبكة'
+  },
+  processing: {
+    fa: 'در حال پردازش...',
+    en: 'Processing...',
+    ar: 'جاري المعالجة...'
+  },
+  verifyCode: {
+    fa: 'تایید کد',
+    en: 'Verify Code',
+    ar: 'تأكيد الرمز'
+  },
+  enterCodeDesc: {
+    fa: 'کد ۵ رقمی ارسال شده به شماره خود را وارد کنید',
+    en: 'Enter the 5-digit code sent to your number',
+    ar: 'أدخل الرمز المكون من 5 أرقام المرسل إلى رقمك'
+  },
+  codeSentTo: {
+    fa: 'کد به شماره زیر ارسال شد:',
+    en: 'Code sent to:',
+    ar: 'تم إرسال الرمز إلى:'
+  },
+  verifying: {
+    fa: 'در حال تایید...',
+    en: 'Verifying...',
+    ar: 'جاري التحقق...'
+  },
+  resendCode: {
+    fa: 'ارسال مجدد کد',
+    en: 'Resend code',
+    ar: 'إعادة إرسال الرمز'
+  },
+  testLogin: {
+    fa: 'ورود آزمایشی',
+    en: 'Test Login',
+    ar: 'تسجيل دخول تجريبي'
+  },
+  invalidCode: {
+    fa: 'کد تایید باید ۵ رقمی باشد',
+    en: 'Verification code must be 5 digits',
+    ar: 'يجب أن يتكون رمز التحقق من 5 أرقام'
+  },
 };
