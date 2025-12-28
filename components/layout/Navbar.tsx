@@ -70,7 +70,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onHome }) => {
           <div className="w-8 h-8 md:w-9 md:h-9 rounded-full bg-indigo-600 flex items-center justify-center shadow-lg shadow-indigo-600/30">
             <Heart className="text-white w-4 h-4 md:w-5 md:h-5" />
           </div>
-          <span className={`font-title text-xl md:text-2xl sm:block ${isLight ? 'text-zinc-900' : 'text-white'}`}>آرام</span>
+          <span className={`font-title text-xl md:text-2xl sm:block ${isLight ? 'text-zinc-900' : 'text-white'}`}>بهش بگین</span>
         </div>
 
         {/* Desktop Links */}

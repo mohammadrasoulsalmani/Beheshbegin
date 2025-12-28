@@ -111,7 +111,7 @@ export const ShareModal: React.FC<ShareModalProps> = ({ message, onClose }) => {
               <div className={`flex justify-between items-center ${isRtl ? 'flex-row' : 'flex-row-reverse'}`}>
                 <div className={`flex items-center gap-3 ${isRtl ? 'flex-row' : 'flex-row-reverse'}`}>
                   <div className="w-8 h-8 rounded-xl bg-indigo-600 flex items-center justify-center shadow-lg"><Heart className="w-4 h-4 text-white" /></div>
-                  <span className="font-title text-xl md:text-2xl">آرام</span>
+                  <span className="font-title text-xl md:text-2xl">بهش بگین</span>
                 (    </div>
               </div>
               <div className="flex-grow flex flex-col justify-center">
