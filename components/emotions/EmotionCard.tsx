@@ -20,7 +20,7 @@ export const EmotionCard: React.FC<EmotionCardProps> = ({ emotion, onClick }) =>
       whileHover={{ y: -8, scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
       onClick={() => onClick(emotion.type)}
-      className={`p-6 md:p-10 rounded-[2.5rem] md:rounded-[3.5rem] border text-right transition-all group flex flex-col gap-4 md:gap-6 ${
+      className={`p-6 md:p-8 rounded-[1.5rem] md:rounded-[2.5rem] border text-right transition-all group flex flex-col gap-4 md:gap-6 ${
         isLight ? 'bg-white border-indigo-50 shadow-2xl shadow-indigo-500/5 hover:border-indigo-300' : 'bg-zinc-900 border-white/5 hover:border-white/20'
       }`}
     >

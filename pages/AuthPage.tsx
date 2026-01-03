@@ -15,13 +15,10 @@ interface RegisterResponse {
   user: {
     id: string;
     phoneNumber: string;
-    firstName?: string;
-    lastName?: string;
     balance: number;
     totalDonated: number;
     isActive: boolean;
   };
-  verificationSent: boolean;
 }
 
 // تابع helper برای ترجمه ایمن
@@ -29,10 +26,9 @@ const getTranslation = (key: string, lang: 'fa' | 'en' | 'ar'): string => {
   const translation = TRANSLATIONS[key];
   if (!translation) {
     console.warn(`Translation key "${key}" not found in constants.ts`);
-    return key; // اگر کلید وجود نداشت، خود کلید را برگردان
+    return key;
   }
   
-  // بازگشت ترجمه بر اساس زبان
   switch (lang) {
     case 'fa':
       return translation.fa;
@@ -58,35 +54,42 @@ export const AuthPage: React.FC = () => {
   const [phoneNumber, setPhoneNumber] = useState(state.phoneNumber);
   const [phoneNumberError, setPhoneNumberError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
-  const [verificationCode, setVerificationCode] = useState('');
-  const [showVerification, setShowVerification] = useState(false);
   const [serverError, setServerError] = useState<string | null>(null);
 
   const validatePhoneNumber = useCallback((num: string): boolean => {
     if (!num.trim()) {
-      setPhoneNumberError('شماره همراه نمی‌تواند خالی باشد.'); // متن فارسی مستقیم
+      setPhoneNumberError('شماره همراه نمی‌تواند خالی باشد.');
       return false;
     }
     if (!PHONE_REGEX.test(num)) {
-      setPhoneNumberError('فرمت شماره همراه اشتباه است (مثال: 09123456789)'); // متن فارسی مستقیم
+      setPhoneNumberError('فرمت شماره همراه اشتباه است (مثال: 09123456789)');
       return false;
     }
     setPhoneNumberError(null);
     return true;
-  }, []); // حذف وابستگی به t
+  }, []);
 
   const handlePhoneNumberChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value;
+    let value = e.target.value;
+    
+    // تبدیل اعداد فارسی به انگلیسی برای پردازش
+    const persianToEnglish = (str: string): string => {
+      const persianDigits = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
+      const englishDigits = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+      
+      return str.split('').map(char => {
+        const index = persianDigits.indexOf(char);
+        return index !== -1 ? englishDigits[index] : char;
+      }).join('');
+    };
+    
+    value = persianToEnglish(value);
     setPhoneNumber(value);
     validatePhoneNumber(value);
     setServerError(null);
   }, [validatePhoneNumber]);
 
-  const handleVerificationCodeChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-    setVerificationCode(e.target.value);
-  }, []);
-
-  // ثبت‌نام یا ورود کاربر با استفاده از api service
+  // ثبت‌نام یا ورود کاربر
   const handleRegister = useCallback(async () => {
     if (!validatePhoneNumber(phoneNumber)) {
       return;
@@ -96,7 +99,7 @@ export const AuthPage: React.FC = () => {
     setServerError(null);
 
     try {
-      // استفاده از api service جدید
+      // استفاده از api service
       const response = await api.users.register(phoneNumber) as RegisterResponse;
 
       // ذخیره اطلاعات کاربر در state
@@ -109,23 +112,20 @@ export const AuthPage: React.FC = () => {
         isLoggedIn: true
       }));
       
-      // اگر ارسال کد تایید موفق بود
-      if (response.verificationSent) {
-        setShowVerification(true);
-      } else {
-        // مستقیماً به مرحله بعد برو
-        setState(s => ({...s, step: 'EMOTION'}));
-      }
+      // مستقیماً به مرحله بعد برو
+      setState(s => ({...s, step: 'EMOTION'}));
       
     } catch (error: any) {
       console.error('Registration error:', error);
       
-      let errorMessage = 'خطا در ارتباط با سرور'; // متن فارسی مستقیم
+      let errorMessage = 'خطا در ارتباط با سرور';
       
       if (error.message) {
         errorMessage = error.message;
       } else if (typeof error === 'string') {
         errorMessage = error;
+      } else if (error.error) {
+        errorMessage = error.error;
       }
       
       setServerError(errorMessage);
@@ -134,47 +134,22 @@ export const AuthPage: React.FC = () => {
     }
   }, [phoneNumber, validatePhoneNumber, setState]);
 
-  // تایید کد verification
-  const handleVerifyCode = useCallback(() => {
-    if (verificationCode.length !== 5) {
-      setServerError('کد تایید باید ۵ رقمی باشد'); // متن فارسی مستقیم
-      return;
-    }
-
-    // در اینجا باید API verify را فراخوانی کنید
-    // فعلاً مستقیماً به مرحله بعد می‌رویم
-    setState(s => ({
-      ...s,
-      phoneNumber: phoneNumber,
-      step: 'EMOTION',
-      isLoggedIn: true
-    }));
-  }, [verificationCode, phoneNumber, setState]);
-
-  // ورود سریع (برای تست)
-  const handleQuickLogin = useCallback(() => {
-    const testPhone = '09123456789';
-    setPhoneNumber(testPhone);
-    
-    if (validatePhoneNumber(testPhone)) {
-      setState(s => ({
-        ...s,
-        phoneNumber: testPhone,
-        userId: 'test-user-id',
-        userData: {
-          id: 'test-user-id',
-          phoneNumber: testPhone,
-          balance: 10000,
-          totalDonated: 5000,
-          isActive: true
-        },
-        step: 'EMOTION',
-        isLoggedIn: true
-      }));
-    }
-  }, [setState, validatePhoneNumber]);
-
   const isFormValid = phoneNumber.trim() !== '' && !phoneNumberError;
+
+  // تابع برای نمایش اعداد فارسی
+  const displayPersianNumbers = (num: string): string => {
+    const englishToPersian = (str: string): string => {
+      const englishDigits = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+      const persianDigits = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
+      
+      return str.split('').map(char => {
+        const index = englishDigits.indexOf(char);
+        return index !== -1 ? persianDigits[index] : char;
+      }).join('');
+    };
+    
+    return englishToPersian(num);
+  };
 
   return (
     <motion.div 
@@ -190,14 +165,11 @@ export const AuthPage: React.FC = () => {
         </div>
         
         <h2 className="font-title text-4xl md:text-5xl mb-3 md:mb-4">
-          {showVerification ? 'تایید کد' : t('authTitle')}
+          {t('authTitle')}
         </h2>
         
         <p className="text-sm md:text-base opacity-50 mb-8 md:mb-12 font-medium font-main">
-          {showVerification 
-            ? 'کد ۵ رقمی ارسال شده به شماره خود را وارد کنید' 
-            : t('authDesc')
-          }
+          {t('authDesc')}
         </p>
 
         {serverError && (
@@ -207,115 +179,45 @@ export const AuthPage: React.FC = () => {
         )}
 
         <div className="space-y-6 md:space-y-8">
-          {!showVerification ? (
-            <>
-              <div className="relative">
-                <Input
-                  dir="ltr"
-                  type="tel"
-                  value={phoneNumber}
-                  onChange={handlePhoneNumberChange}
-                  className={`text-2xl md:text-3xl ${phoneNumberError ? 'border-red-500 focus:border-red-500' : ''}`}
-                  placeholder="09..."
-                  disabled={isLoading}
-                />
-                {phoneNumberError && (
-                  <p className="text-red-500 text-sm mt-2 font-main text-right">{phoneNumberError}</p>
-                )}
-              </div>
+          <div className="relative">
+            <input
+              type="tel"
+              value={displayPersianNumbers(phoneNumber)}
+              onChange={handlePhoneNumberChange}
+              className={`w-full p-4 md:p-6 rounded-2xl border text-center text-xl md:text-2xl font-bold outline-none transition-all font-main
+                ${isLight 
+                  ? 'bg-zinc-50 border-zinc-100 focus:border-indigo-500 placeholder:text-zinc-400' 
+                  : 'bg-black border-white/10 focus:border-indigo-500 placeholder:text-white/30'
+                }
+                ${phoneNumberError ? 'border-red-500 focus:border-red-500' : ''}
+                text-right dir-rtl`}
+              placeholder="۰۹۱۲۳۴۵۶۷۸۹"
+              disabled={isLoading}
+              dir="rtl" // فارسی راست‌چین
+              style={{ direction: 'rtl', textAlign: 'center' }}
+            />
+            {phoneNumberError && (
+              <p className="text-red-500 text-sm mt-2 font-main text-right" style={{ direction: 'rtl' }}>
+                {phoneNumberError}
+              </p>
+            )}
+          </div>
 
-              <Button
-                onClick={handleRegister}
-                size="lg"
-                className="w-full text-lg md:text-xl relative"
-                disabled={!isFormValid || isLoading}
-              >
-                {isLoading ? (
-                  <>
-                    <Loader2 className="w-5 h-5 mr-2 animate-spin" />
-                    در حال پردازش...
-                  </>
-                ) : (
-                  t('verify')
-                )}
-              </Button>
-
-              {/* دکمه تست برای توسعه */}
-              {process.env.NODE_ENV === 'development' && (
-                <Button
-                  variant="outline"
-                  onClick={handleQuickLogin}
-                  size="lg"
-                  className="w-full text-lg md:text-xl"
-                >
-                  ورود آزمایشی
-                </Button>
-              )}
-            </>
-          ) : (
-            <>
-              <div className="text-center mb-6">
-                <p className="text-lg mb-2 font-main">
-                  کد به شماره زیر ارسال شد:
-                </p>
-                <p className="text-2xl font-bold text-indigo-600 dark:text-indigo-400 font-main">
-                  {phoneNumber}
-                </p>
-              </div>
-
-              <Input
-                dir="ltr"
-                type="text"
-                value={verificationCode}
-                onChange={handleVerificationCodeChange}
-                className="text-3xl text-center tracking-widest"
-                placeholder="12345"
-                maxLength={5}
-                disabled={isLoading}
-              />
-
-              <div className="flex gap-4">
-                <Button
-                  variant="outline"
-                  onClick={() => setShowVerification(false)}
-                  className="flex-1"
-                  disabled={isLoading}
-                >
-                  {t('back')}
-                </Button>
-                
-                <Button
-                  onClick={handleVerifyCode}
-                  size="lg"
-                  className="flex-1"
-                  disabled={verificationCode.length !== 5 || isLoading}
-                >
-                  {isLoading ? (
-                    <>
-                      <Loader2 className="w-5 h-5 mr-2 animate-spin" />
-                      در حال تایید...
-                    </>
-                  ) : (
-                    t('confirm')
-                  )}
-                </Button>
-              </div>
-
-              <div className="text-center">
-                <button
-                  type="button"
-                  onClick={() => {
-                    setShowVerification(false);
-                    handleRegister();
-                  }}
-                  className="text-sm text-indigo-600 dark:text-indigo-400 hover:underline font-main"
-                  disabled={isLoading}
-                >
-                  ارسال مجدد کد
-                </button>
-              </div>
-            </>
-          )}
+          <Button
+            onClick={handleRegister}
+            size="lg"
+            className="w-full text-lg md:text-xl relative"
+            disabled={!isFormValid || isLoading}
+          >
+            {isLoading ? (
+              <>
+                <Loader2 className="w-5 h-5 mr-2 animate-spin" />
+                در حال ورود...
+              </>
+            ) : (
+              'ورود' // تغییر از t('verify') به 'ورود'
+            )}
+          </Button>
         </div>
       </div>
 
@@ -329,7 +231,7 @@ export const AuthPage: React.FC = () => {
       </Button>
 
       {/* اطلاعات اتصال به API برای دیباگ */}
-      {process.env.NODE_ENV === 'development' && (
+      {/* {process.env.NODE_ENV === 'development' && (
         <div className="mt-4 p-3 bg-gray-100 dark:bg-gray-800 rounded-lg text-xs">
           <p className="font-mono">
             API URL: {process.env.REACT_APP_API_URL || 'http://localhost:3003/api'}
@@ -338,7 +240,7 @@ export const AuthPage: React.FC = () => {
             Phone: {phoneNumber} | Valid: {isFormValid.toString()}
           </p>
         </div>
-      )}
+      )} */}
     </motion.div>
   );
 };

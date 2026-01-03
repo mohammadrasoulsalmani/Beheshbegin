@@ -67,8 +67,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onHome }) => {
         {/* Logo (Centered on mobile) */}
         <div className={`flex items-center gap-2 md:gap-3 cursor-pointer ${isRtl ? 'flex-row' : 'flex-row-reverse'}
           flex-grow md:flex-grow-0 justify-center md:justify-start`} onClick={onHome}> {/* Centered on mobile */}
-          <div className="w-8 h-8 md:w-9 md:h-9 rounded-full bg-indigo-600 flex items-center justify-center shadow-lg shadow-indigo-600/30">
-            <Heart className="text-white w-4 h-4 md:w-5 md:h-5" />
+          <div className="w-8 h-8 md:w-9 md:h-9 flex rounded-full items-center justify-center shadow-lg shadow-indigo-600/30 overflow-hidden">
+            <img 
+              src="/img/icon.png" 
+              alt="Logo"
+              className="w-full h-full object-cover"
+            />
           </div>
           <span className={`font-title text-xl md:text-2xl sm:block ${isLight ? 'text-zinc-900' : 'text-white'}`}>بهش بگین</span>
         </div>

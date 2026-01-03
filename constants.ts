@@ -167,7 +167,7 @@ export const TRANSLATIONS: { [key: string]: LocalizedString } = {
     ar: 'فرصة لـ',
   },
   heroTitleBottom: {
-    fa: 'بهش بگینش یک قلب',
+    fa: 'برای اینکه بهش بگین',
     en: 'A Heart\'s Peace',
     ar: 'راحة القلب',
   },
@@ -177,7 +177,7 @@ export const TRANSLATIONS: { [key: string]: LocalizedString } = {
     ar: 'رسائل مجهولة هادفة مبنية على نصوص إنسانية عميقة وعلم النفس.',
   },
   cta: {
-    fa: 'ارسال پیام بهش بگینش‌بخش',
+    fa: 'ارسال پیام تا بهش بگین',
     en: 'Send a Peaceful Message',
     ar: 'أرسل رسالة سلام',
   },

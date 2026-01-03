@@ -24,7 +24,7 @@ export const MessageCard: React.FC<MessageCardProps> = ({ msg, onClick, onShare 
   const [liked, setLiked] = useState(false);
 
   return (
-    <motion.div layout initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} className={`group w-full ${isRtl ? 'text-right' : 'text-left'} p-5 md:p-6 rounded-[2.5rem] border transition-all relative flex flex-col gap-3 md:gap-4 ${
+    <motion.div layout initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} className={`group w-full ${isRtl ? 'text-right' : 'text-left'} p-4 md:p-6 rounded-[2.5rem] border transition-all relative flex flex-col gap-2 md:gap-4 ${
         isLight ? 'bg-white border-indigo-50 shadow-xl shadow-indigo-500/5 hover:border-indigo-200' : 'bg-[#121212] border-white/5 hover:border-white/10 shadow-lg'
       }`}>
       <div className={`flex justify-between items-center ${isRtl ? 'flex-row' : 'flex-row-reverse'}`}>

@@ -292,13 +292,9 @@ export const del = async <T>(
  */
 export const userAPI = {
   // ثبت‌نام کاربر
-  register: (phoneNumber: string, firstName?: string, lastName?: string, email?: string) => 
-    post<{ user: User; verificationSent: boolean }>('/users/register', {
-      phoneNumber,
-      firstName,
-      lastName,
-      email
-    }),
+  // در بخش userAPI:
+  register: (phoneNumber: string) => 
+    post<{ user: User }>('/users/register', { phoneNumber }),
 
   // دریافت اطلاعات کاربر
   getUser: (userId: string) => 
@@ -325,6 +321,7 @@ export const userAPI = {
 /**
  * API پیام‌ها
  */
+// api.ts - بخش اصلاح شده messageAPI
 export const messageAPI = {
   // دریافت لیست پیام‌ها
   getMessages: (params: {
@@ -337,7 +334,7 @@ export const messageAPI = {
     sortBy?: string;
     sortOrder?: 'asc' | 'desc';
   } = {}) => 
-    get<{ data: Message[]; pagination: any }>('/messages', params),
+    get<Message[]>('/messages', params),
 
   // دریافت پیام تصادفی
   getRandomMessage: (params: { emotion?: string; source?: string; language?: string } = {}) => 

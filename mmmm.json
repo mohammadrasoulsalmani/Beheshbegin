@@ -1,0 +1,732 @@
+[
+{
+"code": "s3",
+"emotion": "SADNESS",
+"source": "QURAN",
+"sourceLabel": {
+"fa": "قرآن کریم",
+"en": "Holy Quran",
+"ar": "القرآن الكريم"
+},
+"reference": {
+"fa": "طلاق، ۷",
+"en": "At-Talaq, 7",
+"ar": "الطلاق، ٧"
+},
+"likes": 215,
+"usageCount": 3200,
+"text": {
+"fa": "خداوند پس از سختی، آسانی قرار می‌دهد.",
+"en": "Allah will bring about, after hardship, ease.",
+"ar": "سَيَجْعَلُ اللَّهُ بَعْدَ عُسْرٍ يُسْرًا."
+},
+"tags": ["قرآن", "صبوری", "امید", "sadness", "quran"],
+"category": "spiritual",
+"isActive": true
+},
+{
+"code": "s4",
+"emotion": "SADNESS",
+"source": "LITERATURE",
+"sourceLabel": {
+"fa": "حافظ",
+"en": "Hafez",
+"ar": "حافظ شيرازي"
+},
+"reference": {
+"fa": "غزل ۱",
+"en": "Ghazal 1",
+"ar": "غزل ١"
+},
+"likes": 430,
+"usageCount": 5100,
+"text": {
+"fa": "صبر کن دل که همه راز دهر خواهی دانست.",
+"en": "Be patient, O heart, for you will know all the secrets of the world.",
+"ar": "اصبر يا قلب فإنك ستعرف كل أسرار الدنيا."
+},
+"tags": ["حافظ", "صبر", "حکمت", "sadness", "literature"],
+"category": "literature",
+"isActive": true
+},
+{
+"code": "f2",
+"emotion": "FEAR",
+"source": "QURAN",
+"sourceLabel": {
+"fa": "قرآن کریم",
+"en": "Holy Quran",
+"ar": "القرآن الكريم"
+},
+"reference": {
+"fa": "بقره، ۲۸۶",
+"en": "Al-Baqarah, 286",
+"ar": "البقرة، ٢٨٦"
+},
+"likes": 180,
+"usageCount": 2900,
+"text": {
+"fa": "خداوند بر هیچکس بیش از توانش تکلیف نمی‌نهد.",
+"en": "Allah does not burden a soul beyond that it can bear.",
+"ar": "لَا يُكَلِّفُ اللَّهُ نَفْسًا إِلَّا وُسْعَهَا."
+},
+"tags": ["قرآن", "آرامش", "توکل", "fear", "quran"],
+"category": "spiritual",
+"isActive": true
+},
+{
+"code": "f3",
+"emotion": "FEAR",
+"source": "BUDDHISM",
+"sourceLabel": {
+"fa": "بودیسم",
+"en": "Buddhism",
+"ar": "البوذية"
+},
+"reference": {
+"fa": "تعالیم بودا",
+"en": "Buddha Teachings",
+"ar": "تعاليم بوذا"
+},
+"likes": 95,
+"usageCount": 1200,
+"text": {
+"fa": "ترس تنها زمانی وجود دارد که در ذهن تو وجود داشته باشد.",
+"en": "Fear exists only in your mind.",
+"ar": "الخوف موجود فقط في عقلك."
+},
+"tags": ["بودیسم", "ذهن آگاهی", "آرامش", "fear", "buddhism"],
+"category": "philosophy",
+"isActive": true
+},
+{
+"code": "a2",
+"emotion": "ANGER",
+"source": "NAHJ_AL_BALAGHA",
+"sourceLabel": {
+"fa": "نهج‌البلاغه",
+"en": "Nahj al-Balagha",
+"ar": "نهج البلاغة"
+},
+"reference": {
+"fa": "حکمت ۱۸۹",
+"en": "Wisdom 189",
+"ar": "حكمة ١٨٩"
+},
+"likes": 310,
+"usageCount": 4100,
+"text": {
+"fa": "خشم را با سکوت و تفکر درمان کن.",
+"en": "Treat anger with silence and contemplation.",
+"ar": "عالج الغضب بالصمت والتأمل."
+},
+"tags": ["نهج البلاغه", "کنترل خشم", "تامل", "anger", "nahj_al_balagha"],
+"category": "wisdom",
+"isActive": true
+},
+{
+"code": "a3",
+"emotion": "ANGER",
+"source": "SHAHNAMEH",
+"sourceLabel": {
+"fa": "شاهنامه فردوسی",
+"en": "Shahnameh",
+"ar": "شاهنامة الفردوسي"
+},
+"reference": {
+"fa": "داستان رستم و سهراب",
+"en": "Rostam and Sohrab",
+"ar": "رستم وسهراب"
+},
+"likes": 270,
+"usageCount": 3800,
+"text": {
+"fa": "خشم، خرد را می‌پوشاند و راه را می‌بندد.",
+"en": "Anger covers wisdom and blocks the path.",
+"ar": "الغضب يغطي الحكمة ويسد الطريق."
+},
+"tags": ["شاهنامه", "خرد", "کنترل", "anger", "shahnameh"],
+"category": "epic",
+"isActive": true
+},
+{
+"code": "l2",
+"emotion": "LONELINESS",
+"source": "ATTAR",
+"sourceLabel": {
+"fa": "عطار نیشابوری",
+"en": "Attar of Nishapur",
+"ar": "عطار النيسابوري"
+},
+"reference": {
+"fa": "منطق‌الطیر",
+"en": "Conference of the Birds",
+"ar": "منطق الطير"
+},
+"likes": 520,
+"usageCount": 6800,
+"text": {
+"fa": "در تنهایی، با خویشتن خویش آشنا می‌شوی.",
+"en": "In solitude, you become acquainted with your true self.",
+"ar": "في الوحدة تتعرف على ذاتك الحقيقية."
+},
+"tags": ["عطار", "خودشناسی", "تنهایی", "loneliness", "attar"],
+"category": "mysticism",
+"isActive": true
+},
+{
+"code": "l3",
+"emotion": "LONELINESS",
+"source": "LITERATURE",
+"sourceLabel": {
+"fa": "سعدی",
+"en": "Saadi",
+"ar": "سعدي شيرازي"
+},
+"reference": {
+"fa": "بوستان",
+"en": "Bustan",
+"ar": "بوستان"
+},
+"likes": 380,
+"usageCount": 4900,
+"text": {
+"fa": "تنهایی، فرصتی است برای گفتگو با خدا.",
+"en": "Loneliness is an opportunity to converse with God.",
+"ar": "الوحدة فرصة للحديث مع الله."
+},
+"tags": ["سعدی", "عبادت", "تنهایی مثبت", "loneliness", "literature"],
+"category": "literature",
+"isActive": true
+},
+{
+"code": "h2",
+"emotion": "HOPELESSNESS",
+"source": "QURAN",
+"sourceLabel": {
+"fa": "قرآن کریم",
+"en": "Holy Quran",
+"ar": "القرآن الكريم"
+},
+"reference": {
+"fa": "یوسف، ۸۷",
+"en": "Yusuf, 87",
+"ar": "يوسف، ٨٧"
+},
+"likes": 640,
+"usageCount": 8300,
+"text": {
+"fa": "از رحمت خداوند ناامید مشوید که تنها گروه کافران از رحمت خدا ناامیدند.",
+"en": "Do not despair of the mercy of Allah. Indeed, no one despairs of the mercy of Allah except the disbelieving people.",
+"ar": "لَا تَقْنَطُوا مِن رَّحْمَةِ اللَّهِ ۚ إِنَّهُ لَا يَقْنَطُ مِن رَّحْمَةِ اللَّهِ إِلَّا الْقَوْمُ الْكَافِرُونَ."
+},
+"tags": ["قرآن", "امید", "رحمت", "hopelessness", "quran"],
+"category": "spiritual",
+"isActive": true
+},
+{
+"code": "h3",
+"emotion": "HOPELESSNESS",
+"source": "ENERGY",
+"sourceLabel": {
+"fa": "جملات انرژی بخش",
+"en": "Inspiring Words",
+"ar": "كلمات ملهمة"
+},
+"likes": 290,
+"usageCount": 3700,
+"text": {
+"fa": "هر پایان، آغازی تازه است.",
+"en": "Every ending is a new beginning.",
+"ar": "كل نهاية هي بداية جديدة."
+},
+"tags": ["امید", "شروع جدید", "انرژی", "hopelessness", "energy"],
+"category": "motivation",
+"isActive": true
+},
+{
+"code": "p2",
+"emotion": "PEACE",
+"source": "BUDDHISM",
+"sourceLabel": {
+"fa": "بودیسم",
+"en": "Buddhism",
+"ar": "البوذية"
+},
+"reference": {
+"fa": "تعالیم ذن",
+"en": "Zen Teachings",
+"ar": "تعاليم زن"
+},
+"likes": 410,
+"usageCount": 6200,
+"text": {
+"fa": "آرامش درونی، بزرگترین ثروت است.",
+"en": "Inner peace is the greatest wealth.",
+"ar": "السلام الداخلي هو أعظم ثروة."
+},
+"tags": ["بودیسم", "آرامش درونی", "ثروت", "peace", "buddhism"],
+"category": "philosophy",
+"isActive": true
+},
+{
+"code": "p3",
+"emotion": "PEACE",
+"source": "ENERGY",
+"sourceLabel": {
+"fa": "جملات آرامش‌بخش",
+"en": "Calming Words",
+"ar": "كلمات مهدئة"
+},
+"likes": 560,
+"usageCount": 7400,
+"text": {
+"fa": "نفس عمیق بکش، همه چیز درست می‌شود.",
+"en": "Take a deep breath, everything will be okay.",
+"ar": "خذ نفسًا عميقًا، كل شيء سيكون على ما يرام."
+},
+"tags": ["آرامش", "تنفس", "اطمینان", "peace", "energy"],
+"category": "motivation",
+"isActive": true
+},
+{
+"code": "s5",
+"emotion": "SADNESS",
+"source": "ATTAR",
+"sourceLabel": {
+"fa": "عطار نیشابوری",
+"en": "Attar of Nishapur",
+"ar": "عطار النيسابوري"
+},
+"reference": {
+"fa": "تذکرة‌الاولیاء",
+"en": "Memorial of the Saints",
+"ar": "تذكرة الأولياء"
+},
+"likes": 195,
+"usageCount": 2600,
+"text": {
+"fa": "غم اگر نبود، شادی معنا نمی‌داشت.",
+"en": "If there were no sorrow, joy would have no meaning.",
+"ar": "لو لم يكن هناك حزن لما كان للفرح معنى."
+},
+"tags": ["عطار", "تضاد", "معنا", "sadness", "attar"],
+"category": "mysticism",
+"isActive": true
+},
+{
+"code": "f4",
+"emotion": "FEAR",
+"source": "SHAHNAMEH",
+"sourceLabel": {
+"fa": "شاهنامه فردوسی",
+"en": "Shahnameh",
+"ar": "شاهنامة الفردوسي"
+},
+"reference": {
+"fa": "داستان سیاوش",
+"en": "Story of Siavash",
+"ar": "قصة سيافاش"
+},
+"likes": 230,
+"usageCount": 3100,
+"text": {
+"fa": "ترس از ناشناخته‌ها، بزرگترین زندان است.",
+"en": "Fear of the unknown is the greatest prison.",
+"ar": "الخوف من المجهول هو أكبر سجن."
+},
+"tags": ["شاهنامه", "شجاعت", "آزادی", "fear", "shahnameh"],
+"category": "epic",
+"isActive": true
+},
+{
+"code": "a4",
+"emotion": "ANGER",
+"source": "LITERATURE",
+"sourceLabel": {
+"fa": "مولانا",
+"en": "Rumi",
+"ar": "مولانا جلال الدين الرومي"
+},
+"reference": {
+"fa": "مثنوی معنوی",
+"en": "Masnavi",
+"ar": "مثنوي معنوي"
+},
+"likes": 680,
+"usageCount": 8900,
+"text": {
+"fa": "خشم آتشی است که ابتدا خود انسان را می‌سوزاند.",
+"en": "Anger is a fire that first burns the person himself.",
+"ar": "الغضب نار تحرق الشخص نفسه أولاً."
+},
+"tags": ["مولانا", "کنترل", "آتش", "anger", "literature"],
+"category": "mysticism",
+"isActive": true
+},
+{
+"code": "l4",
+"emotion": "LONELINESS",
+"source": "ENERGY",
+"sourceLabel": {
+"fa": "جملات حمایتی",
+"en": "Supportive Words",
+"ar": "كلمات داعمة"
+},
+"likes": 175,
+"usageCount": 2200,
+"text": {
+"fa": "تو هرگز تنها نیستی، ستارگان همراه تو هستند.",
+"en": "You are never alone, the stars are with you.",
+"ar": "أنت لست وحيدًا أبدًا، النجوم معك."
+},
+"tags": ["حمایت", "طبیعت", "همراهی", "loneliness", "energy"],
+"category": "motivation",
+"isActive": true
+},
+{
+"code": "h4",
+"emotion": "HOPELESSNESS",
+"source": "NAHJ_AL_BALAGHA",
+"sourceLabel": {
+"fa": "نهج‌البلاغه",
+"en": "Nahj al-Balagha",
+"ar": "نهج البلاغة"
+},
+"reference": {
+"fa": "خطبه ۱۹۱",
+"en": "Sermon 191",
+"ar": "خطبة ١٩١"
+},
+"likes": 420,
+"usageCount": 5500,
+"text": {
+"fa": "سخت‌ترین لحظات، نزدیک‌ترین زمان به گشایش است.",
+"en": "The hardest moments are the closest to relief.",
+"ar": "أصعب اللحظات هي الأقرب إلى الفرج."
+},
+"tags": ["نهج البلاغه", "صبر", "گشایش", "hopelessness", "nahj_al_balagha"],
+"category": "wisdom",
+"isActive": true
+},
+{
+"code": "p4",
+"emotion": "PEACE",
+"source": "QURAN",
+"sourceLabel": {
+"fa": "قرآن کریم",
+"en": "Holy Quran",
+"ar": "القرآن الكريم"
+},
+"reference": {
+"fa": "فصلت، ۳۰",
+"en": "Fussilat, 30",
+"ar": "فصلت، ٣٠"
+},
+"likes": 890,
+"usageCount": 11200,
+"text": {
+"fa": "فرشتگان بر دل‌های مؤمنان آرامش می‌فرستند.",
+"en": "The angels descend upon the hearts of the believers with tranquility.",
+"ar": "تَنَزَّلُ الْمَلَائِكَةُ عَلَى قُلُوبِ الْمُؤْمِنِينَ بِالسَّكِينَةِ."
+},
+"tags": ["قرآن", "فرشتگان", "آرامش الهی", "peace", "quran"],
+"category": "spiritual",
+"isActive": true
+},
+{
+"code": "s6",
+"emotion": "SADNESS",
+"source": "BUDDHISM",
+"sourceLabel": {
+"fa": "بودیسم",
+"en": "Buddhism",
+"ar": "البوذية"
+},
+"reference": {
+"fa": "چهار حقیقت نجیب",
+"en": "Four Noble Truths",
+"ar": "الحقائق النبيلة الأربع"
+},
+"likes": 130,
+"usageCount": 1800,
+"text": {
+"fa": "رنج بخشی از زندگی است، پذیرش آن آزادی است.",
+"en": "Suffering is part of life, accepting it is freedom.",
+"ar": "المعاناة جزء من الحياة، تقبلها هو الحرية."
+},
+"tags": ["بودیسم", "پذیرش", "رنج", "sadness", "buddhism"],
+"category": "philosophy",
+"isActive": true
+},
+{
+"code": "f5",
+"emotion": "FEAR",
+"source": "LITERATURE",
+"sourceLabel": {
+"fa": "خیام",
+"en": "Omar Khayyam",
+"ar": "عمر الخيام"
+},
+"reference": {
+"fa": "رباعیات",
+"en": "Rubaiyat",
+"ar": "الرباعيات"
+},
+"likes": 310,
+"usageCount": 4200,
+"text": {
+"fa": "از آینده مترس، همین لحظه را زندگی کن.",
+"en": "Do not fear the future, live this moment.",
+"ar": "لا تخش المستقبل، عش هذه اللحظة."
+},
+"tags": ["خیام", "حال", "زندگی", "fear", "literature"],
+"category": "philosophy",
+"isActive": true
+},
+{
+"code": "a5",
+"emotion": "ANGER",
+"source": "ENERGY",
+"sourceLabel": {
+"fa": "جملات درمانی",
+"en": "Healing Words",
+"ar": "كلمات علاجية"
+},
+"likes": 95,
+"usageCount": 1400,
+"text": {
+"fa": "آب آرامش را بر آتش خشم بریز.",
+"en": "Pour the water of tranquility on the fire of anger.",
+"ar": "اسكب ماء الهدوء على نار الغضب."
+},
+"tags": ["آرامش", "کنترل خشم", "درمان", "anger", "energy"],
+"category": "motivation",
+"isActive": true
+},
+{
+"code": "l5",
+"emotion": "LONELINESS",
+"source": "QURAN",
+"sourceLabel": {
+"fa": "قرآن کریم",
+"en": "Holy Quran",
+"ar": "القرآن الكريم"
+},
+"reference": {
+"fa": "توبه، ۴۰",
+"en": "At-Tawbah, 40",
+"ar": "التوبة، ٤٠"
+},
+"likes": 720,
+"usageCount": 9500,
+"text": {
+"fa": "اگر یاریش نکنید، خداوند او را یاری داد.",
+"en": "If you do not aid him, Allah has already aided him.",
+"ar": "إِن تَنصُرُوهُ فَقَدْ نَصَرَهُ اللَّهُ."
+},
+"tags": ["قرآن", "توکل", "یاری خدا", "loneliness", "quran"],
+"category": "spiritual",
+"isActive": true
+},
+{
+"code": "h5",
+"emotion": "HOPELESSNESS",
+"source": "ATTAR",
+"sourceLabel": {
+"fa": "عطار نیشابوری",
+"en": "Attar of Nishapur",
+"ar": "عطار النيسابوري"
+},
+"reference": {
+"fa": "الهی‌نامه",
+"en": "Ilahi-nama",
+"ar": "الالهي نامة"
+},
+"likes": 240,
+"usageCount": 3300,
+"text": {
+"fa": "در تاریک‌ترین شب‌ها، ستاره‌ها می‌درخشند.",
+"en": "In the darkest nights, the stars shine.",
+"ar": "في أظلم الليالي، تلمع النجوم."
+},
+"tags": ["عطار", "امید", "ستارگان", "hopelessness", "attar"],
+"category": "mysticism",
+"isActive": true
+},
+{
+"code": "p5",
+"emotion": "PEACE",
+"source": "SHAHNAMEH",
+"sourceLabel": {
+"fa": "شاهنامه فردوسی",
+"en": "Shahnameh",
+"ar": "شاهنامة الفردوسي"
+},
+"reference": {
+"fa": "داستان زال و رودابه",
+"en": "Zal and Rudabeh",
+"ar": "زال و رودابة"
+},
+"likes": 190,
+"usageCount": 2700,
+"text": {
+"fa": "صلح بهتر از پیروزی با جنگ است.",
+"en": "Peace is better than victory through war.",
+"ar": "السلام خير من النصر عبر الحرب."
+},
+"tags": ["شاهنامه", "صلح", "آرامش", "peace", "shahnameh"],
+"category": "epic",
+"isActive": true
+},
+{
+"code": "s7",
+"emotion": "SADNESS",
+"source": "LITERATURE",
+"sourceLabel": {
+"fa": "صائب تبریزی",
+"en": "Saeb Tabrizi",
+"ar": "صائب التبريزي"
+},
+"reference": {
+"fa": "غزلیات",
+"en": "Ghazals",
+"ar": "الغزليات"
+},
+"likes": 160,
+"usageCount": 2100,
+"text": {
+"fa": "هر غمی ناگهان آید، ناگهان نیز رود.",
+"en": "Every sorrow comes suddenly, and suddenly it goes.",
+"ar": "كل حزن يأتي فجأة، وفجأة يذهب."
+},
+"tags": ["صائب", "گذرا", "تغییر", "sadness", "literature"],
+"category": "literature",
+"isActive": true
+},
+{
+"code": "f6",
+"emotion": "FEAR",
+"source": "NAHJ_AL_BALAGHA",
+"sourceLabel": {
+"fa": "نهج‌البلاغه",
+"en": "Nahj al-Balagha",
+"ar": "نهج البلاغة"
+},
+"reference": {
+"fa": "حکمت ۳۶",
+"en": "Wisdom 36",
+"ar": "حكمة ٣٦"
+},
+"likes": 280,
+"usageCount": 3900,
+"text": {
+"fa": "ترس از خدا، از همه ترس‌ها ایمن می‌کند.",
+"en": "Fear of God protects from all fears.",
+"ar": "الخوف من الله يحمي من جميع المخاوف."
+},
+"tags": ["نهج البلاغه", "تقوا", "ایمنی", "fear", "nahj_al_balagha"],
+"category": "wisdom",
+"isActive": true
+},
+{
+"code": "a6",
+"emotion": "ANGER",
+"source": "BUDDHISM",
+"sourceLabel": {
+"fa": "بودیسم",
+"en": "Buddhism",
+"ar": "البوذية"
+},
+"reference": {
+"fa": "تعالیم ذن",
+"en": "Zen Teachings",
+"ar": "تعاليم زن"
+},
+"likes": 110,
+"usageCount": 1600,
+"text": {
+"fa": "خشم را رها کن تا آرامش را بیابی.",
+"en": "Let go of anger to find peace.",
+"ar": "اترك الغضب لتجد السلام."
+},
+"tags": ["بودیسم", "رها کردن", "آرامش", "anger", "buddhism"],
+"category": "philosophy",
+"isActive": true
+},
+{
+"code": "l6",
+"emotion": "LONELINESS",
+"source": "SHAHNAMEH",
+"sourceLabel": {
+"fa": "شاهنامه فردوسی",
+"en": "Shahnameh",
+"ar": "شاهنامة الفردوسي"
+},
+"reference": {
+"fa": "داستان فریدون",
+"en": "Story of Fereydun",
+"ar": "قصة فريدون"
+},
+"likes": 205,
+"usageCount": 2800,
+"text": {
+"fa": "قهرمان واقعی کسی است که در تنهایی هم استوار است.",
+"en": "A true hero is one who stands firm even in solitude.",
+"ar": "البطل الحقيقي هو من يثبت حتى في الوحدة."
+},
+"tags": ["شاهنامه", "قهرمانی", "استواری", "loneliness", "shahnameh"],
+"category": "epic",
+"isActive": true
+},
+{
+"code": "h6",
+"emotion": "HOPELESSNESS",
+"source": "LITERATURE",
+"sourceLabel": {
+"fa": "سنایی",
+"en": "Sanai",
+"ar": "سنائي"
+},
+"reference": {
+"fa": "حدیقة‌الحقیقة",
+"en": "The Garden of Truth",
+"ar": "حديقة الحقيقة"
+},
+"likes": 175,
+"usageCount": 2400,
+"text": {
+"fa": "چون امید از دل برود، همه چیز می‌رود.",
+"en": "When hope leaves the heart, everything leaves.",
+"ar": "عندما يغادر الأمل القلب، يغادر كل شيء."
+},
+"tags": ["سنایی", "امید", "قلب", "hopelessness", "literature"],
+"category": "mysticism",
+"isActive": true
+},
+{
+"code": "p6",
+"emotion": "PEACE",
+"source": "ATTAR",
+"sourceLabel": {
+"fa": "عطار نیشابوری",
+"en": "Attar of Nishapur",
+"ar": "عطار النيسابوري"
+},
+"reference": {
+"fa": "مصیبت‌نامه",
+"en": "Book of Affliction",
+"ar": "مصيبة نامة"
+},
+"likes": 230,
+"usageCount": 3200,
+"text": {
+"fa": "آرامش در پذیرش هر آنچه هست نهفته است.",
+"en": "Peace lies in accepting whatever is.",
+"ar": "السلام يكمن في تقبل كل ما هو كائن."
+},
+"tags": ["عطار", "پذیرش", "رهایی", "peace", "attar"],
+"category": "mysticism",
+"isActive": true
+}
+]
